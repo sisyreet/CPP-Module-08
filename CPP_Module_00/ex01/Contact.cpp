@@ -9,52 +9,52 @@ Contact::~Contact(void)
 { 
 }
 
-void Contact::setFirstName(string &firstName)
+void Contact::setFirstName(std::string &firstName)
 {
 	this->_firstName = firstName;
 }
 
-string Contact::getFirstName()
+std::string Contact::getFirstName() const
 {
 	return this->_firstName;
 }
 
-void Contact::setLastName(string &lastName)
+void Contact::setLastName(std::string &lastName)
 {
 	this->_lastName = lastName;
 }
 
-string Contact::getLastName()
+std::string Contact::getLastName() const
 {
 	return this->_lastName;
 }
 
-void Contact::setNickname(string &nickname)
+void Contact::setNickname(std::string &nickname)
 {
 	this->_nickname = nickname;
 }
 
-string Contact::getNickname()
+std::string Contact::getNickname() const
 {
 	return this->_nickname;
 }
 
-void Contact::setPhone(string &phone)
+void Contact::setPhone(std::string &phone)
 {
 	this->_phone = phone;
 }
 
-string Contact::getPhone()
+std::string Contact::getPhone() const
 {
 	return this->_phone;
 }
 
-void Contact::setDarkestSecret(string &darkestSecret)
+void Contact::setDarkestSecret(std::string &darkestSecret)
 {
 	this->_darkestSecret = darkestSecret;
 }
 
-string Contact::getDarkestSecret()
+std::string Contact::getDarkestSecret() const
 {
 	return this->_darkestSecret;
 }

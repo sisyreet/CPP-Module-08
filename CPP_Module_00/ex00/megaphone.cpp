@@ -6,7 +6,7 @@
 /*   By: sisyreet <sisyreet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 15:59:10 by sisyreet          #+#    #+#             */
-/*   Updated: 2022/10/23 17:00:38 by sisyreet         ###   ########.fr       */
+/*   Updated: 2022/11/18 19:09:52 by sisyreet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main(int argc, char **argv)
 			std::cout << (char)toupper(argv[i][j]);
 			j++;
 		}
+		// std::cout << ' ';
 		i++;
 	}
 	std::cout << std::endl;

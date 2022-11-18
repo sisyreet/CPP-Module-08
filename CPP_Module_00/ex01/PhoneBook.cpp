@@ -3,16 +3,16 @@
 
 Phonebook::Phonebook(void) 
 {
-	std::cout << "Phonebook was created" << endl;
+	std::cout << "Phonebook was created" << std::endl;
 	return;
 }
 
 Phonebook::~Phonebook(void)
 {
-	std::cout << "Phonebook was deleted" << endl; 
+	std::cout << "Phonebook was deleted" << std::endl; 
 }
 
-Contact Phonebook::getContact(int index)
+Contact Phonebook::getContact(int index) const
 {
 	return this->_contacts[index];
 }
@@ -22,14 +22,14 @@ void	Phonebook::setFilled(int n)
 	this->_filled = n;
 }
 
-int		Phonebook::getFilled(void)
+int		Phonebook::getFilled(void) const
 {
 	return this->_filled;
 }
 
 void	Phonebook::addContact(int index)
 {
-	string temp;
+	std::string temp;
 
 	std::cout << "INPUT FIRST NAME: ";
 	std::cin >> temp;
@@ -64,7 +64,7 @@ void	Phonebook::searchContact(int index)
 	{
 		std::cout << "|";
 		std::cout.width(10);
-		std::cout << i + 1 << right << "|";
+		std::cout << i + 1 << std::right << "|";
 		std::cout.width(10);
 		printField(this->_contacts[i].getFirstName());
 		std::cout.width(10);
@@ -73,7 +73,7 @@ void	Phonebook::searchContact(int index)
 		printField(this->_contacts[i].getNickname());
 		std::cout.width(10);
 		printField(this->_contacts[i].getPhone());
-		std::cout << endl;
+		std::cout << std::endl;
 		i++;
 	}
 	std::cout << "|----------|----------|----------|----------|----------|\n";
@@ -81,7 +81,7 @@ void	Phonebook::searchContact(int index)
 	{
 		std::cout << "INPUT INDEX (1-8): ";
 		std::cin >> id;
-		if (!cin || id > 8 || id < 1)
+		if (!std::cin || id > 8 || id < 1)
 		{
 			std::cin.clear();
 			std::cin.ignore(1000, '\n');
@@ -104,12 +104,12 @@ void	Phonebook::searchContact(int index)
 	}
 }
 
-void	Phonebook::printField(string line)
+void	Phonebook::printField(std::string line)
 {
 	if (line.length() > 10)
 		std::cout << line.substr(0, 9) + ".|";
 	else
-		std::cout << line << right << "|";
+		std::cout << line << std::right << "|";
 }
 
 void	Phonebook::printChosenContact(int id)
@@ -117,7 +117,7 @@ void	Phonebook::printChosenContact(int id)
 	std::cout << "|     INDEX|FIRST NAME| LAST NAME|  NICKNAME|     PHONE|\n";
 	std::cout << "|----------|----------|----------|----------|----------|\n|";
 	std::cout.width(10);
-	std::cout << id << right << "|";
+	std::cout << id << std::right << "|";
 	std::cout.width(10);
 	printField(this->_contacts[id - 1].getFirstName());
 	std::cout.width(10);
@@ -126,6 +126,6 @@ void	Phonebook::printChosenContact(int id)
 	printField(this->_contacts[id - 1].getNickname());
 	std::cout.width(10);
 	printField(this->_contacts[id - 1].getPhone());
-	std::cout << endl;
+	std::cout << std::endl;
 	std::cout << "|----------|----------|----------|----------|----------|\n";
 }

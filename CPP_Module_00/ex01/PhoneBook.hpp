@@ -2,6 +2,8 @@
 # define PHONEBOOK_CLASS_H
 # include "Contact.hpp"
 
+class Contact;
+
 class Phonebook {
 	
 	Contact	_contacts[8];
@@ -15,11 +17,11 @@ public:
 	void	addContact(int index);
 	void	searchContact(int index);
 	void	setTotalContacts(int num);
-	int		getTotalContacts(void);
+	int		getTotalContacts(void) const;
 	void	setFilled(int n);
-	int		getFilled(void);
-	Contact	getContact(int index);
-	void	printField(string line);
+	int		getFilled(void) const;
+	Contact	getContact(int index) const;
+	void	printField(std::string line);
 	void	printChosenContact(int id);
 
 };

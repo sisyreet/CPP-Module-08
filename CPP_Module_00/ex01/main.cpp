@@ -4,7 +4,7 @@
 int	main(void)
 {
 	Phonebook	phonebook;
-	string		cmd;
+	std::string		cmd;
 	int			i;
 
 	phonebook.setFilled(0);
@@ -15,8 +15,8 @@ int	main(void)
 		{
 			std::cout << "TYPE COMMAND: ";
 			std::cin >> cmd;
-			if (!cin)
-				exit (1);
+			if (!std::cin)
+				return (1);
 			if (cmd == "ADD")
 			{
 				phonebook.addContact(i);
