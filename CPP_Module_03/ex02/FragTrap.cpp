@@ -44,5 +44,5 @@ FragTrap::~FragTrap()
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << this->_name << " is going to HIGH FIVE you!.\n";
+	std::cout << "FragTrap " << this->_name << " is going to HIGH FIVE you!\n";
 }

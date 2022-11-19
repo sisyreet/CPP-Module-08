@@ -3,11 +3,7 @@
 int	main(void)
 {
 	ClapTrap noob("noob");
-	// ClapTrap pro("pro");
 	ClapTrap pro("pro", 3, 6, 6);
-	// ClapTrap noname(pro);
-	// ClapTrap noname2;
-	// noname2 = noname;
 
 	for (int i = 6; i > 0; i--)
 	{
