@@ -6,13 +6,15 @@ OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= Robotomy
 
+HEADER	= Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+
 CXX		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(HEADER)
 		$(CXX) $(OBJS) -o $(NAME)
 
 %.o:		%.cpp Makefile

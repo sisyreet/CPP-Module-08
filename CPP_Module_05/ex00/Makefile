@@ -4,13 +4,15 @@ OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= Bureaucrat
 
+HEADER	= Bureaucrat.hpp
+
 CXX		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(HEADER)
 		$(CXX) $(OBJS) -o $(NAME)
 
 %.o:		%.cpp Makefile

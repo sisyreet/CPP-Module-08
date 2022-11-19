@@ -4,13 +4,15 @@ OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= AMateria
 
+HEADER	= AMateria.hpp Character.cpp Cure.hpp Ice.hpp MateriaSource.hpp
+
 CXX		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(HEADER)
 		$(CXX) $(OBJS) -o $(NAME)
 
 %.o:		%.cpp Makefile
