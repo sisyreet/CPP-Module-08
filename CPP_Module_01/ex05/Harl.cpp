@@ -15,14 +15,14 @@ void	Harl::debug(void)
 
 void	Harl::info(void)
 {
-	std::cout << "[INFO]\nI cannot believe adding extra bacon costs more money.\n	\
-	You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!\n";
+	std::cout << "[INFO]\nI cannot believe adding extra bacon costs more money.\n"
+		<< "You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!\n";
 }
 
 void	Harl::warning(void)
 {
-	std::cout << "[WARNING]\nI think I deserve to have some extra bacon for free.\n	\
-	I’ve been coming for years whereas you started working here since last month.\n";
+	std::cout << "[WARNING]\nI think I deserve to have some extra bacon for free.\n"
+		<< "I've been coming for years whereas you started working here since last month.\n";
 }
 
 void	Harl::error(void)

@@ -2,15 +2,12 @@
 
 int main(void)
 {
-	int		N = 3;
-	int		i = 0;
+	int		N = -13;
 	Zombie* theHorde = zombieHorde(N, "zombozie");
 
-	while (i < N)
-	{
+	for (int i = 0; i < N; i++)
 		theHorde[i].announce();
-		i++;
-	}
+
 	delete[] theHorde;
 	return 0;
 }

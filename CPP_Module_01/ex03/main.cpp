@@ -19,5 +19,16 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
+	std::cout << "\n~~~~~~~~~~~~~~ MY TESTS ~~~~~~~~~~~~~~\n\n";
+	Weapon glock = Weapon("glock");
+	HumanA biba("biba", glock);
+	HumanB boba("boba");
+
+	boba.attack(); //attack with no gun
+	biba.attack();
+	boba.setWeapon(glock);
+	glock.setType("grenade launcher");
+	boba.attack();
+
 return 0;
 }
