@@ -25,7 +25,7 @@ Fixed& Fixed::operator=(Fixed const& rhs)
 	return *this;
 }
 
-Fixed::Fixed(int const integer) : _fix(integer << _nfb) // сдвиг на 8 бит, из 10 получается 2560
+Fixed::Fixed(int const integer) : _fix(integer << _nfb) // сдвиг на 8 бит, из 10 получается 2560 // *256
 {
 	std::cout << "Int constructor called\n";
 }

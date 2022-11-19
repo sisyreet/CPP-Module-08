@@ -156,12 +156,12 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-	return static_cast<float>(this->_fix) / (1 << _nfb); //кастуем в флоат результат деления числа на 256
+	return static_cast<float>(this->_fix) / (1 << _nfb);
 }
 
 int Fixed::toInt(void) const
 {
-	return this->_fix >> _nfb; //сдвигаем на 8 битов вправо, из 2560 получаем 10
+	return this->_fix >> _nfb;
 }
 
 std::ostream& operator<<(std::ostream& os, Fixed const& rhs) {

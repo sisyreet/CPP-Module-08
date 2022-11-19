@@ -5,6 +5,8 @@
 
 class Fixed
 {
+private:
+
 	int					_fix;
 	static const int	_nfb = 8;
 
@@ -43,6 +45,7 @@ public:
 	void	setRawBits(int const raw);
 	float	toFloat(void) const;
 	int		toInt(void) const;
+
 };
 
 std::ostream& operator<<(std::ostream& os, Fixed const& rhs);

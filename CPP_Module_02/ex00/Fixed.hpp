@@ -5,6 +5,7 @@
 
 class Fixed
 {
+private:
 
 	int					_fix;
 	static const int	_nfb = 8;
@@ -12,12 +13,13 @@ class Fixed
 public:
 
 	Fixed();
-	Fixed(Fixed const& src);						//	конструктор копирования, создает точную копию класса, который подается как исходник
+	Fixed(Fixed const& src);
 	~Fixed();
-	Fixed& operator=(Fixed& rhs);			// имплеметнация оператора присваивания (инициализиации), 
-											// содержимое объекта замещается новым содержимым
+	Fixed& operator=(Fixed& rhs);
+
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
+
 };
 
 #endif
