@@ -4,7 +4,7 @@ OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= DiamondTrap
 
-HEADER	= ScavTrap.hpp ClapTrap.hpp DiamondTrap.hpp FragTrap.hpp
+HEADER	= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 CXX		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98

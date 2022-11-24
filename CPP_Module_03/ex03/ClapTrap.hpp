@@ -6,7 +6,6 @@
 
 class ClapTrap
 {
-
 protected:
 
 	std::string	_name;
@@ -19,9 +18,10 @@ public:
 	ClapTrap();
 	ClapTrap(ClapTrap const& src);
 	ClapTrap& operator=(ClapTrap const& src);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	ClapTrap(std::string name);
+	// ClapTrap(std::string name, int attackDamage, int energyPoints, int hitPoints);
 
 	void		attack(const std::string& target);
 	void		takeDamage(unsigned int amount);

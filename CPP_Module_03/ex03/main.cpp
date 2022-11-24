@@ -1,21 +1,22 @@
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 #include "DiamondTrap.hpp"
 
 int	main(void)
 {
+	// FragTrap Biba("Biba");
+	// FragTrap Boba("Boba");
+
 	DiamondTrap Biba("Biba");
-
-	Biba.whoAmI();
-	std::cout << Biba.getAttackDamage() << ", " << Biba.getEnergyPoints() << ", " << Biba.getHitPoints() << "\n";
-	// DiamondTrap Boba("Boba");
-
-	// Boba.attack("Biba");
-	// Biba.takeDamage(Boba.getAttackDamage());
-	// Biba.attack("Boba");
-	// Boba.takeDamage(Biba.getAttackDamage());
-	// Biba.beRepaired(2);
-	// Boba.beRepaired(3);
+	DiamondTrap Boba("Boba");
+	std::cout << "====================================\n";
+	std::cout << Biba.getAttackDamage() << ", " << Biba.getEnergyPoints() << ", " << Biba.getHitPoints() << std::endl;
+	std::cout << "====================================\n";
 	
-	// std::cout << std::endl;
-	// Biba.highFivesGuys();
-	// std::cout << std::endl;
+	Boba.attack("Biba");
+	Biba.attack("Boba");
+	
+	std::cout << std::endl;
+	Biba.whoAmI();
+	std::cout << std::endl;
 }

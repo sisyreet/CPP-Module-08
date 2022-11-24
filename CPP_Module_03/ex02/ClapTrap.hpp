@@ -19,7 +19,7 @@ public:
 	ClapTrap();
 	ClapTrap(ClapTrap const& src);
 	ClapTrap& operator=(ClapTrap const& src);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	ClapTrap(std::string name);
 	ClapTrap(std::string name, int attackDamage, int energyPoints, int hitPoints);
