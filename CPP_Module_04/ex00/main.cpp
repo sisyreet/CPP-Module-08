@@ -27,9 +27,9 @@ int main()
 	wrong_animal->makeSound();
 
 	std::cout << std::endl;
-	delete animal;
-	delete dog;
-	delete cat;
 	delete wrong_cat;
 	delete wrong_animal;
+	delete cat;
+	delete dog;
+	delete animal;
 }

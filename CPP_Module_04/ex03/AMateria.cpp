@@ -2,22 +2,19 @@
 
 AMateria::AMateria()
 {
-	std::cout << "AMateria default class constructor called!\n";
 }
 
 AMateria::AMateria(std::string const& type)
 {
 	this->_type = type;
-	std::cout << "AMateria type class constructor called!\n";
 }
 
 AMateria::AMateria(AMateria const& src)
 {
 	this->_type = src._type;
-	std::cout << "AMateria copy class constructor called!\n";
 }
 
-// AMateria& AMateria::operator=(AMateria const& src) useless
+// AMateria& AMateria::operator=(AMateria const& src) useless coz it is abstract class
 // {
 // 	this->_type = src._type;
 // 	return (*this);
@@ -25,7 +22,6 @@ AMateria::AMateria(AMateria const& src)
 
 AMateria::~AMateria()
 {
-	std::cout << "AMateria destructor called!\n";
 }
 
 std::string const & AMateria::getType() const

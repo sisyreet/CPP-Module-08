@@ -4,7 +4,7 @@ OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= AAnimal
 
-HEADER	= Animal.hpp Cat.cpp Dog.hpp Brain.hpp
+HEADER	= AAnimal.hpp Cat.cpp Dog.hpp Brain.hpp
 
 CXX		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98

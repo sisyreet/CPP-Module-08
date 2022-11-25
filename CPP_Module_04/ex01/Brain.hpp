@@ -14,7 +14,6 @@ public:
 	Brain(Brain const& src);
 	Brain& operator=(Brain const& src);
 	~Brain();
-
 };
 
 #endif

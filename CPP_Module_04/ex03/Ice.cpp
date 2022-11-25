@@ -1,21 +1,18 @@
 #include "Ice.hpp"
 #include "ICharacter.hpp"
 
-Ice::Ice() : _type("ice")
+Ice::Ice() : AMateria("ice")
 {
-	std::cout << "Ice default class constructor called!\n";
 }
 
-Ice::Ice(std::string const& type) : _type(type)
+Ice::Ice(std::string const& type)
 {
 	this->_type = type;
-	std::cout << "Ice type class constructor called!\n";
 }
 
 Ice::Ice(Ice const& src)
 {
 	this->_type = src._type;
-	std::cout << "Ice copy class constructor called!\n";
 }
 
 Ice& Ice::operator=(Ice const& src)
@@ -26,15 +23,9 @@ Ice& Ice::operator=(Ice const& src)
 
 Ice::~Ice()
 {
-	std::cout << "Ice destructor called!\n";
 }
 
-std::string const & Ice::getType() const
-{
-	return this->_type;
-}
-
-Ice* Ice::clone() const
+AMateria* Ice::clone() const
 {
 	Ice	*temp = new Ice;
 	return (temp);

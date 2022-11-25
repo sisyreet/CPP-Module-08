@@ -9,10 +9,6 @@
 
 class Cure : public AMateria
 {
-protected:
-
-	std::string	_type;
-
 public:
 
 	Cure();	
@@ -21,8 +17,7 @@ public:
 	Cure& operator=(Cure const& src);
 	virtual ~Cure();
 
-	std::string const&	getType() const; //Returns the materia type
-	Cure*				clone() const;
+	virtual AMateria	*clone() const;
 	virtual void		use(ICharacter& target);
 
 };

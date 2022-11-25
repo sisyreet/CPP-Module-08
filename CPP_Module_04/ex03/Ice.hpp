@@ -8,9 +8,6 @@
 
 class Ice : public AMateria
 {
-protected:
-
-	std::string	_type;
 
 public:
 
@@ -20,9 +17,8 @@ public:
 	Ice& operator=(Ice const& src);
 	virtual ~Ice();
 
-	std::string const&	getType() const; //Returns the materia type
-	Ice*				clone() const;
-	virtual void		use(ICharacter& target);
+	virtual AMateria *clone() const;
+	virtual void use(ICharacter &target);
 
 };
 

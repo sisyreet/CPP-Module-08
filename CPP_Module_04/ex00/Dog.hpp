@@ -11,7 +11,7 @@ public:
 	Dog();
 	Dog(Dog const& src);
 	Dog& operator=(Dog const& src);
-	~Dog();
+	virtual ~Dog();
 
 	virtual void makeSound() const;
 	std::string	getType() const;

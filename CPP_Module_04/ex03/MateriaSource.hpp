@@ -5,7 +5,10 @@
 
 class MateriaSource : public IMateriaSource
 {
-	AMateria* _inventory[4];
+private:
+
+	AMateria			*m_materias[4];
+	int					m_materiasLearned;
 
 public:
 

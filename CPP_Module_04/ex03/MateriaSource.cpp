@@ -1,69 +1,61 @@
 #include "MateriaSource.hpp"
 
-MateriaSource::MateriaSource()
+MateriaSource::MateriaSource(void) : m_materiasLearned(0)
 {
-	std::cout << "MateriaSource default constructor called!\n";
 	for (int i = 0; i < 4; i++)
-		this->_inventory[i] = 0;
+		m_materias[i] = nullptr;
 }
 
-MateriaSource::MateriaSource(MateriaSource const& src)
+MateriaSource::MateriaSource(MateriaSource const &toCopy)
 {
-	for (int i = 0; i < 4; i++)
-		delete this->_inventory[i];
-	for (int i = 0; i < 4; i++)
-		this->_inventory[i] = src._inventory[i];
+	*this = toCopy;
 }
 
-MateriaSource& MateriaSource::operator=(MateriaSource const& src)
+MateriaSource &MateriaSource::operator = (MateriaSource const &toCopy)
 {
 	for (int i = 0; i < 4; i++)
-		delete this->_inventory[i];
-	for (int i = 0; i < 4; i++)
-		this->_inventory[i] = src._inventory[i];
-	return *this;
-}
-
-MateriaSource::~MateriaSource()
-{
-	std::cout << "MateriaSource destructor called!\n";
-	for (int i = 0; i < 4; i++)
-		delete this->_inventory[i];
-}
-
-void MateriaSource::learnMateria(AMateria* m)
-{
-	if (!m)
 	{
-		std::cout << "Cannot learn nothing!\n";
+		if (this->m_materias[i])
+			delete this->m_materias[i];
+		this->m_materias[i] = toCopy.m_materias[i];
+	}
+	return (*this);
+}
+
+void MateriaSource::learnMateria(AMateria *mToLearn)
+{
+	if (m_materiasLearned == 4)
+	{
+		std::cout << "Can't learn more materias!" << std::endl;
 		return ;
 	}
-	int i = 0;
-	while(i != 4)
+	for (int i = 0; i < 4; i++)
 	{
-		if (this->_inventory[i] == 0)
+		if (this->m_materias[i] == nullptr)
 		{
-			this->_inventory[i] = m;
-			std::cout << "Learned " << m->getType() << " materia\n";
-			return;
+			this->m_materias[i] = mToLearn;
+			m_materiasLearned++;
+			std::cout << "Materia " << mToLearn->getType() << " learned!" << std::endl;
+			return ;
 		}
-		i++;
 	}
-	if (i == 4)
-		std::cout << "Cannot learn more!\n";
 }
 
-AMateria* MateriaSource::createMateria(std::string const& type)
+AMateria* MateriaSource::createMateria(std::string const &type)
 {
-	int i = 0;
-
-	while (i != 4 && this->_inventory[i] && this->_inventory[i]->getType() != type)
-		i++;
-	if (i == 4 || !(this->_inventory[i]))
+	for (int i = 0; i < 4; i++)
 	{
-		std::cout << type << " materia does not exist\n";
-		return (NULL);
+		if (this->m_materias[i] && this->m_materias[i]->getType() == type)
+			return (this->m_materias[i]->clone());
 	}
-	std::cout << "Materia " << type << " created\n";
-	return (this->_inventory[i]->clone());
+	return (NULL);	
+}
+
+MateriaSource::~MateriaSource(void)
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->m_materias[i])
+			delete this->m_materias[i];
+	}
 }

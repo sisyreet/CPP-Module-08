@@ -1,21 +1,18 @@
 #include "Cure.hpp"
 #include "ICharacter.hpp"
 
-Cure::Cure() : _type("cure")
+Cure::Cure() : AMateria("cure")
 {
-	std::cout << "Cure default class constructor called!\n";
 }
 
-Cure::Cure(std::string const& type) : _type(type)
+Cure::Cure(std::string const& type)
 {
 	this->_type = type;
-	std::cout << "Cure type class constructor called!\n";
 }
 
 Cure::Cure(Cure const& src)
 {
 	this->_type = src._type;
-	std::cout << "Cure copy class constructor called!\n";
 }
 
 Cure& Cure::operator=(Cure const& src)
@@ -26,17 +23,11 @@ Cure& Cure::operator=(Cure const& src)
 
 Cure::~Cure()
 {
-	std::cout << "Cure destructor called!\n";
 }
 
-std::string const & Cure::getType() const
+AMateria* Cure::clone() const
 {
-	return this->_type;
-}
-
-Cure* Cure::clone() const
-{
-	Cure	*temp = new Cure;
+	Cure	*temp = new Cure(*this);
 	return (temp);
 }
 

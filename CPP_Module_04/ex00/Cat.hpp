@@ -5,13 +5,12 @@
 
 class	Cat : public Animal
 {
-
 public:
 
 	Cat();
 	Cat(Cat const& src);
 	Cat& operator=(Cat const& src);
-	~Cat();
+	virtual ~Cat();
 
 	virtual void makeSound() const;
 	std::string	getType() const;
