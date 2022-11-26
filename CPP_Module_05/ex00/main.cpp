@@ -40,10 +40,12 @@ int main(void)
 {
 	Bureaucrat Biba("Biba", 1);
 	Bureaucrat Boba("Boba", 150);
-	std::cout << std::endl;
+
+	std::cout << "=============================" << std::endl;
 	std::cout << Boba;
 	std::cout << Biba;
-	std::cout << std::endl;
+	std::cout << "=============================" << std::endl;
+
 	tests(Biba, Boba);
 	
 }

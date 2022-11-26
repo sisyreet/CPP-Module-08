@@ -46,5 +46,5 @@ AForm* Intern::makeForm(std::string formName, std::string target) const
 		return form;
 	} else
 		throw(InternException());
-
+	
 }
