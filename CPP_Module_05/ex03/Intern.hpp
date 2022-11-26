@@ -1,9 +1,9 @@
 #ifndef INTERN_HPP
 # define INTERN_HPP
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Intern
 {
@@ -15,7 +15,7 @@ public:
 	Intern& operator=(Intern const& src);
 	~Intern();
 
-	Form* makeForm(std::string formName, std::string target) const;
+	AForm* makeForm(std::string formName, std::string target) const;
 
 	class InternException : public std::exception
 	{

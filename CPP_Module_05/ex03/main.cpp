@@ -15,10 +15,10 @@ int	main(void)
 	std::cout << "----------------------------" << std::endl;
 
 	Intern	intern;
-	Form	*robo_form;
-	Form	*shrub_form;
-	Form	*president_form;
-	Form	*unknown_form;
+	AForm	*robo_form;
+	AForm	*shrub_form;
+	AForm	*president_form;
+	AForm	*unknown_form;
 	std::cout << std::endl << std::endl;
 	//-----------------------------------------------------
 

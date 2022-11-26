@@ -2,9 +2,9 @@
 # define ROBOTOMYREQUSTFORM_HPP
 
 #include <cstdlib>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class RobotomyRequestForm : public Form
+class RobotomyRequestForm : public AForm
 {
 	std::string _target;
 

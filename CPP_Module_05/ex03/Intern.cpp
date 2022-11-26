@@ -31,9 +31,9 @@ const char* Intern::InternException::what() const throw()
 	return ("Intern doesn't know such form!");
 }
 
-Form* Intern::makeForm(std::string formName, std::string target) const
+AForm* Intern::makeForm(std::string formName, std::string target) const
 {
-	Form *form;
+	AForm *form;
 
 	if (formName == "newPresidential") {
 		form = new PresidentialPardonForm(target);

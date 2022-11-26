@@ -29,11 +29,11 @@ int main(void)
 	Bureaucrat buba("Buba", 150);
 
 
-	// std::cout << '\n';
-	// std::cout << form1;
-	// std::cout << '\n';
-	// std::cout << form2;
-	// std::cout << '\n';
+	std::cout << '\n';
+	std::cout << form1;
+	std::cout << '\n';
+	std::cout << form2;
+	std::cout << '\n';
 	
 	
 	biba.signForm(form1);

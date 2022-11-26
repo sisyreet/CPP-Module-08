@@ -1,18 +1,18 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : Form("Default RobotomyRequestForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm() : AForm("Default RobotomyRequestForm", 72, 45)
 {
 	this->_target = "Default";
 	std::cout << "RobotomyRequestForm default construcutor called!\n";
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("Targer RobotomyRequestForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("Targer RobotomyRequestForm", 72, 45)
 {
 	this->_target = target;
 	std::cout << "Targer RobotomyRequestForm construcutor called!\n";
 }
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & src) : Form(src.getName(), src.getGradeToSign(), src.getGradeToExec())
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & src) : AForm(src.getName(), src.getGradeToSign(), src.getGradeToExec())
 {
 	this->_target = src._target;
 	std::cout << "RobotomyRequestForm copy construcutor called!\n";
@@ -36,9 +36,9 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	int condition = std::rand() % 2;
 
 	if (this->getSignedStatus() == false)
-		throw(Form::UnsignedFormException());
+		throw(AForm::UnsignedFormException());
 	else if (this->getGradeToExec() < executor.getGrade())
-		throw(Form::GradeTooLowException());
+		throw(AForm::GradeTooLowException());
 	else
 	{
 		std::cout << "Makes some drilling noises...\n";

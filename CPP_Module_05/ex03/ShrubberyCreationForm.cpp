@@ -1,18 +1,18 @@
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() : Form("Default ShrubberyCreationForm", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Default ShrubberyCreationForm", 145, 137)
 {
 	this->_target = "Default";
 	std::cout << "ShrubberyCreationForm default construcutor called!\n";
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("Targer ShrubberyCreationForm", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("Targer ShrubberyCreationForm", 145, 137)
 {
 	this->_target = target;
 	std::cout << "Targer ShrubberyCreationForm construcutor called!\n";
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & src) : Form(src.getName(), src.getGradeToSign(), src.getGradeToExec())
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & src) : AForm(src.getName(), src.getGradeToSign(), src.getGradeToExec())
 {
 	this->_target = src._target;
 	std::cout << "ShrubberyCreationForm copy construcutor called!\n";
@@ -63,9 +63,9 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	"                        / / \\;=;\\\n";
 
 	if (this->getSignedStatus() == false)
-		throw(Form::UnsignedFormException());
+		throw(AForm::UnsignedFormException());
 	else if (this->getGradeToExec() < executor.getGrade())
-		throw(Form::GradeTooLowException());
+		throw(AForm::GradeTooLowException());
 	else
 	{
 		std::ofstream ofs(fileName);

@@ -1,4 +1,4 @@
-SRCS	= main.cpp	Bureaucrat.cpp	Form.cpp \
+SRCS	= main.cpp	Bureaucrat.cpp	AForm.cpp \
 		ShrubberyCreationForm.cpp	RobotomyRequestForm.cpp \
 		PresidentialPardonForm.cpp
 
@@ -6,7 +6,7 @@ OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= Robotomy
 
-HEADER	= Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+HEADER	= Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
 
 CXX		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
