@@ -7,13 +7,14 @@ int main(void)
 	data->value1 = "value1";
 	data->value2 = "value2";
 
-	std::cout << "data->value1 = " << data->value1 << " and data->value2= " << data->value2 << std::endl;
+	std::cout << "data->value1 = " << data->value1 << " and data->value2 = " << data->value2 << std::endl;
 	std::cout << std::endl;
 	std::cout << "Address data: " << data << std::endl;
 	std::cout << "Ptr : " << serialize(data) << std::endl;
+	std::cout << "Ptr : 0x" << std::hex << serialize(data) << std::endl;
 	std::cout << "Address data: " << deserialize(serialize(data)) << std::endl;
 	std::cout << std::endl;
-	std::cout << "data->value1 = " << data->value1 << " and data->value2= " << data->value2 << std::endl;
+	std::cout << "data->value1 = " << data->value1 << " and data->value2 = " << data->value2 << std::endl;
 	
 	/*
 	числовое значение указателя
