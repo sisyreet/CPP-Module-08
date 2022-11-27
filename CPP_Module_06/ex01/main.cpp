@@ -15,12 +15,6 @@ int main(void)
 	std::cout << "Address data: " << deserialize(serialize(data)) << std::endl;
 	std::cout << std::endl;
 	std::cout << "data->value1 = " << data->value1 << " and data->value2 = " << data->value2 << std::endl;
-	
-	/*
-	числовое значение указателя
-	статик каст меняет данные
-	реинт меняет тип данных
-	*/
 
 	delete data;
 }
