@@ -2,6 +2,8 @@
 
 int main(void)
 {
+	srand(time(0));
+
 	Base * base = new Base;
 
 	Base *A = generate();

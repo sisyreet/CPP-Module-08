@@ -1,4 +1,4 @@
-SRCS	= main.cpp Convert.cpp
+SRCS	= main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 

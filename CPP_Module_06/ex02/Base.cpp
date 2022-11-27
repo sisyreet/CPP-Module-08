@@ -6,13 +6,10 @@ Base* generate(void)
 	{
 	case 0:
 		return (new A);
-		break;
 	case 1:
 		return (new B);
-		break;
 	case 2:
 		return (new C);
-		break;
 	}
 	return(NULL);
 }
